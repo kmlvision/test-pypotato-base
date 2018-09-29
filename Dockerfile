@@ -1,11 +1,9 @@
-FROM buildpack-deps:bionic
+FROM buildpack-deps:xenial
 
 LABEL MAINTAINER="KML VISION, devops@kmlvision.com"
 
 
-# install chromium and export the binary file for testing
-RUN export DEBIAN_FRONTEND=noninteractive && \
-  apt-get update -qq && \
+RUN apt-get update -qq && \
   apt-get install -y -qq \
   python3 \
   python3-dev \
