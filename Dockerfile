@@ -2,7 +2,7 @@ FROM buildpack-deps:xenial
 
 LABEL MAINTAINER="KML VISION, devops@kmlvision.com"
 
-COPY requirements.txt /
+COPY basic_requirements.txt /
 
 RUN apt-get update -qq && \
   apt-get install -y -qq \
